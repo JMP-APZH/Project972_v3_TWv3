@@ -49,7 +49,7 @@ function App() {
   return (
 
 <div className="App">
-      <Login />
+      {/* <Login /> */}
       {/* <Registration_be /> */}
       {/* <GoogleAuth /> */}
       {/* <GoogleLogIn2 /> */}
