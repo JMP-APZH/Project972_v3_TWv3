@@ -38,6 +38,7 @@ import { ReactComponent as ArrowIcon } from './icons/arrow.svg';
 import { ReactComponent as BoltIcon } from './icons/bolt.svg';
 import DropdownMenu from './components/DropdownMenu';
 import LandingAuth2 from './pages/LandingAuth2';
+import Survey_1 from './pages/Survey_1';
 
 
 // import { useNavigate } from 'react-router'
@@ -86,6 +87,7 @@ function App() {
             <Route path="/regform" element={<RegForm />} />
             <Route path="/login" element={<MainLogin />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/survey_1" element={<Survey_1 />} />
             <Route path="/profile/:username" element={<Profile />} />
             <Route path="*" element={<ErrorPage />} />
 
