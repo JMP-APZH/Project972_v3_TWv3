@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'accounts',
     'registrationjwt2',
     'user',
+    'polls1',
 
 ]
 
@@ -160,6 +161,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# for the polls1 app:
+STATIC_DIRS = [BASE_DIR/'static']
 
 # added-jmp
 
