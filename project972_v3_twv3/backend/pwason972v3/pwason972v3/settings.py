@@ -163,7 +163,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # for the polls1 app:
-STATIC_DIRS = [BASE_DIR/'static']
+STATICFILES_DIRS = [BASE_DIR/'static']
 
 # added-jmp
 

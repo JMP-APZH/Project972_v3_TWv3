@@ -3,13 +3,11 @@
 
     <h3><strong>Django Polls Application</strong></h3>
 
-    <h1>Index Page</h1>
-
     <div class="list-group">
         {% for question in questions %}
-        <a href=" {% url 'vote' question.id %} " class="list-group-item list-group-item-action">
-            <h5>{{question.question}}</h5></a>
-    {% endfor %}
+            <a href=" {% url 'vote' question.id %} " class="list-group-item list-group-item-action">
+                <h5>{{question.question}}</h5></a>
+        {% endfor %}
         
     </div>
 
