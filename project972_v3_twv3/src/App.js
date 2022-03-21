@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './input.css';
 import './App.css';
 import './index.css';
@@ -39,6 +39,7 @@ import { ReactComponent as BoltIcon } from './icons/bolt.svg';
 import DropdownMenu from './components/DropdownMenu';
 import LandingAuth2 from './pages/LandingAuth2';
 import Survey_1 from './pages/Survey_1';
+import ProgressBar from './components/ProgressBar';
 
 
 // import { useNavigate } from 'react-router'
@@ -47,6 +48,24 @@ import Survey_1 from './pages/Survey_1';
 
 function App() {
   // const navigate = useNavigate();
+
+  // dynamic value changes for the ProgressBar
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setValue((oldValue) => {
+        const newValue = oldValue + 10;
+
+        if (newValue === 100) {
+          clearInterval(interval);
+        }
+
+        return newValue;
+      })
+    }, 1000);
+  }, []);
+
   return (
 
 <div className="App">
@@ -89,6 +108,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/survey_1" element={<Survey_1 />} />
             <Route path="/profile/:username" element={<Profile />} />
+            <Route path="/pb" element={<ProgressBar color={"lightBlue"} width={"300px"} value={value} max={100} />} />
             <Route path="*" element={<ErrorPage />} />
 
 
