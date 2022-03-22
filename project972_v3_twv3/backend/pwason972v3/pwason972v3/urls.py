@@ -74,7 +74,9 @@ urlpatterns = [
     path('backend/api/auth/token/verify/', jwt_views.TokenVerifyView.as_view(), name='token_refresh'),
     # path('backend/api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('backend/api/auth/', include('registrationjwt2.urls')),
-    path('backend/api/polls1/', include('polls1.urls'))
+    path('backend/api/polls1/', include('polls1.urls')),
+
+    path('backend/api/dashboard/', include('dashboard.urls'))
 
 ]
 
