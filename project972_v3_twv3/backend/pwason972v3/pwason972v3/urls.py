@@ -76,7 +76,7 @@ urlpatterns = [
     path('backend/api/auth/', include('registrationjwt2.urls')),
     path('backend/api/polls1/', include('polls1.urls')),
 
-    path('backend/api/dashboard/', include('dashboard.urls'))
+    # path('backend/api/dashboard/', include('dashboard.urls'))
 
 ]
 

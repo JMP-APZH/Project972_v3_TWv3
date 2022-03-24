@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     'registrationjwt2',
     'user',
     'polls1',
-    'dashboard',
+    # 'dashboard',
 
 ]
 
