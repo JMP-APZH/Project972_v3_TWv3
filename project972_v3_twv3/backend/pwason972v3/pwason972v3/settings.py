@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'corsheaders',
+    'crispy_forms',
 
 
     # own Apps:
@@ -61,6 +62,7 @@ INSTALLED_APPS = [
     'user',
     'polls1',
     # 'dashboard',
+    'dashboard2',
 
 ]
 
@@ -84,7 +86,7 @@ ROOT_URLCONF = 'pwason972v3.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,6 +145,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

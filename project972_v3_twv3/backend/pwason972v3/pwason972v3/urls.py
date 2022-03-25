@@ -78,6 +78,8 @@ urlpatterns = [
 
     # path('backend/api/dashboard/', include('dashboard.urls'))
 
+    path('', include('dashboard2.urls'))
+
 ]
 
 
