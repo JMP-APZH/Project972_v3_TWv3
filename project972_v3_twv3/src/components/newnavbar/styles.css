@@ -1,0 +1,44 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+   background-color: #333;
+   color: white;
+}
+
+.navbar-container {
+    background-color: white;
+    border-radius: .5rem;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 10rem;
+}
+
+.list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list a {
+    color: #333;
+    text-decoration: none;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list .text {
+    font-size: .8em;
+}
+
+.list .icon {
+    /* to get the icon color to be the same as the related text */
+    fill: currentColor;
+    width: 1.5em;
+    height: 1.5em;
+}
