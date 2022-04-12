@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'polls1',
     # 'dashboard',
     'dashboard2',
+    'dependentform',
 
 ]
 
