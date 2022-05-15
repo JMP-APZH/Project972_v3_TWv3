@@ -39,6 +39,7 @@ import { ReactComponent as BoltIcon } from './icons/bolt.svg';
 import DropdownMenu from './components/DropdownMenu';
 import LandingAuth2 from './pages/LandingAuth2';
 import Survey_1 from './pages/Survey_1';
+import Survey_2 from './pages/Survey_2';
 import ProgressBar from './components/ProgressBar';
 
 
@@ -107,6 +108,7 @@ function App() {
             <Route path="/login" element={<MainLogin />} />
             <Route path="/home" element={<Home />} />
             <Route path="/survey_1" element={<Survey_1 />} />
+            <Route path="/Survey_2" element={<Survey_2 />} />
             <Route path="/profile/:username" element={<Profile />} />
             <Route path="/pb" element={<ProgressBar color={"lightBlue"} width={"300px"} value={value} max={100} />} />
             <Route path="*" element={<ErrorPage />} />

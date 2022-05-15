@@ -78,7 +78,9 @@ urlpatterns = [
 
     # path('backend/api/dashboard/', include('dashboard.urls'))
 
-    path('', include('dashboard2.urls'))
+    path('', include('dashboard2.urls')),
+
+    path('backend/api/dependentform/', include('dependentform.urls')),
 
 ]
 

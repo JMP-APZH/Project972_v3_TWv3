@@ -7,11 +7,16 @@ import { ReactComponent as BoltIcon } from '../icons/bolt.svg';
 
 import { CSSTransition } from 'react-transition-group';
 
+// import { useNavigate } from 'react-router'
+
 function DropdownMenu() {
 
     const [activeMenu, setActiveMenu] = useState('main');
     const [menuHeight, setMenuHeight] = useState(null);
     const dropdownRef = useRef(null);
+    // const navigate = useNavigate();
+
+    
 
     useEffect(() => {
         setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
@@ -23,6 +28,7 @@ function DropdownMenu() {
     }
 
     function DropdownItem(props) {
+
         return (
             <a 
                 href="#" 
@@ -37,6 +43,7 @@ function DropdownMenu() {
         )
     }
 
+
     return (
         <div 
             className="dropdown"
@@ -45,7 +52,7 @@ function DropdownMenu() {
             >
 
             <CSSTransition
-                className="menu-primary" 
+                className="menu-primary pb-6" 
                 in={activeMenu === 'main'} 
                 unmountOnExit 
                 timeout={500}
@@ -53,14 +60,21 @@ function DropdownMenu() {
                 >
                 <div className="menu">
 
-                    <DropdownItem>My Profile</DropdownItem>
+                    <DropdownItem
+                        // goToMenu="surveys-m"
+                        // onClick={() => {
+                        //     navigate("/home")
+                        // }}
+                    >
+                        Home
+                    </DropdownItem>
 
                     <DropdownItem
                         leftIcon={<CogIcon />}
                         rightIcon={<ChevronIcon />}
-                        goToMenu="settings"
+                        goToMenu="surveys-m"
                         >
-                            Settings
+                            Surveys
                     </DropdownItem>
 
                     <DropdownItem
@@ -68,7 +82,7 @@ function DropdownMenu() {
                         rightIcon={<ChevronIcon />}
                         goToMenu="animals"
                         >
-                        Animals
+                        User Menu
                     </DropdownItem>
 
                     <DropdownItem leftIcon={<BoltIcon />}>The End!</DropdownItem>
@@ -78,8 +92,8 @@ function DropdownMenu() {
             </CSSTransition>
 
             <CSSTransition
-                className="menu-secondary" 
-                in={activeMenu === 'settings'} 
+                className="menu-secondary pb-6" 
+                in={activeMenu === 'surveys-m'} 
                 unmountOnExit 
                 timeout={500}
                 onEnter={calcHeight}
@@ -91,15 +105,15 @@ function DropdownMenu() {
                         goToMenu="main"
                         leftIcon={<ArrowIcon />}
                         >
-                            <h2> My Tutorial </h2>
+                            <h2> Main Menu </h2>
                     </DropdownItem>
 
-                    <DropdownItem leftIcon={<BoltIcon />}>HTML</DropdownItem>
-                    <DropdownItem leftIcon={<BoltIcon />}>CSS</DropdownItem>
-                    <DropdownItem leftIcon={<BoltIcon />}>JavaScript</DropdownItem>
-                    <DropdownItem leftIcon={<BoltIcon />}>Awesome!</DropdownItem>
+                    <DropdownItem leftIcon={<BoltIcon />}>Survey 1</DropdownItem>
+                    <DropdownItem leftIcon={<BoltIcon />}>Survey 2</DropdownItem>
+                    <DropdownItem leftIcon={<BoltIcon />}>Survey 3</DropdownItem>
+                    <DropdownItem leftIcon={<BoltIcon />}>Survey 4</DropdownItem>
                     
-                    <DropdownItem leftIcon={<BoltIcon />}>The End!</DropdownItem>
+                    <DropdownItem leftIcon={<BoltIcon />}>Survey 5</DropdownItem>
 
                 </div>
 
@@ -108,7 +122,7 @@ function DropdownMenu() {
             <CSSTransition
                 in={activeMenu === 'animals'}
                 timeout={500}
-                className="menu-secondary"
+                className="menu-secondary pb-6"
                 unmountOnExit
                 onEnter={calcHeight}>
 
@@ -117,7 +131,7 @@ function DropdownMenu() {
                         goToMenu="main" 
                         leftIcon={<ArrowIcon />}
                         >
-                        <h2>Animals</h2>
+                        <h2>Main Menu</h2>
                     </DropdownItem>
 
                     <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>

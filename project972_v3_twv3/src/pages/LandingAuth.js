@@ -13,7 +13,7 @@ const LandingAuth = () => {
             <div 
                 className="flex flex-col 
                             text-5xl
-                            pt-8">
+                            pt-6">
                 Kontan Wè Zot'
             </div>
 
@@ -120,7 +120,7 @@ const LandingAuth = () => {
                 </ul>
             </div> 
 
-            <div className="pb-8">
+            <div className="pb-10">
                         <button className="button-box3 
                                     bg-black hover:bg-blue-500 
                                     text-white font-bold 
