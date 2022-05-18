@@ -75,6 +75,7 @@ urlpatterns = [
     # path('backend/api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('backend/api/auth/', include('registrationjwt2.urls')),
     path('backend/api/polls1/', include('polls1.urls')),
+    path('backend/api/polls2/', include('polls2.urls')),
 
     # path('backend/api/dashboard/', include('dashboard.urls'))
 

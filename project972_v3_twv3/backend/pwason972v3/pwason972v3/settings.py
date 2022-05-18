@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'corsheaders',
     'crispy_forms',
+    'widget_tweaks',
 
 
     # own Apps:
@@ -61,6 +62,7 @@ INSTALLED_APPS = [
     'registrationjwt2',
     'user',
     'polls1',
+    'polls2',
     # 'dashboard',
     'dashboard2',
     'dependentform',
